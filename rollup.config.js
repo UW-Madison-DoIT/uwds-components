@@ -6,7 +6,7 @@ import minify from 'rollup-plugin-minify-es';
  * Use HTML and minify plugin for each component directory
  */
 let plugins = {
-  topBar: [
+  topBarMin: [
     html({
       include: `src/top-bar/top-bar.html`,
       htmlMinifierOptions: {
@@ -20,7 +20,17 @@ let plugins = {
         wrap_iife: true
       }
     })
-  ]
+  ],
+  topBarFull: [
+    html({
+      include: `src/top-bar/top-bar.html`,
+      htmlMinifierOptions: {
+        collapseWhitespace: true,
+        collapseBooleanAttributes: true,
+        conservativeCollapse: true
+      }
+    })
+  ],
 };
 
 /**
@@ -29,7 +39,7 @@ let plugins = {
 export default [
   {
     input: `src/top-bar/top-bar.js`,
-    plugins: plugins.topBar,
+    plugins: plugins.topBarMin,
     output: {
       file: `dist/top-bar/top-bar.min.js`,
       name: 'UWDSTopBar',
@@ -38,11 +48,29 @@ export default [
   },
   {
     input: `src/top-bar/top-bar.js`,
-    plugins: plugins.topBar,
+    plugins: plugins.topBarMin,
     output: {
       file: `dist/top-bar/top-bar.min.mjs`,
       name: 'UWDSTopBar',
       format: 'es'
     }
   },
+  {
+    input: `src/top-bar/top-bar.js`,
+    plugins: plugins.topBarFull,
+    output: {
+      file: `dist/top-bar/top-bar.mjs`,
+      name: 'UWDSTopBar',
+      format: 'es'
+    }
+  },
+  {
+    input: `src/top-bar/top-bar.js`,
+    plugins: plugins.topBarFull,
+    output: {
+      file: `dist/top-bar/top-bar.js`,
+      name: 'UWDSTopBar',
+      format: 'iife'
+    }
+  }
 ];
