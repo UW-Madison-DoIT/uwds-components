@@ -1,0 +1,25 @@
+{
+  "name": "uwds-components",
+  "version": "0.0.1",
+  "description": "Web components developed for the UW IT Design System",
+  "main": "index.js",
+  "scripts": {
+    "build": "rollup -c",
+    "watch": "rollup -c -w",
+    "serve": "live-server --port=4200",
+    "start": "run-p watch serve"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "live-server": "^1.2.0",
+    "npm-run-all": "^4.1.3",
+    "rollup": "^0.63.4",
+    "rollup-plugin-html": "^0.2.1",
+    "rollup-plugin-minify-es": "^1.1.1",
+    "rollup-plugin-multi-entry": "^2.1.0"
+  },
+  "files": [
+    "dist"
+  ]
+}
