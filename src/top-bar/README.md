@@ -2,6 +2,20 @@
 
 This doc is a WIP
 
+## Using the top-bar
+
+1. Here we will describe the process for including the required js/mjs file in an adopter's project/website. We have used npm and unpkg in the past, but folks have expressed interest in self-hosting and creating our own CDN. 
+
+2. Use the custom element:
+
+```html
+<uwds-top-bar 
+  theme-name="My" 
+  app-name="Fancy App" 
+  app-url="/my/home/path">
+</uwds-top-bar>
+```
+
 ### Attributes
 
 - app-url
