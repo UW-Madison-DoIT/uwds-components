@@ -16,7 +16,7 @@ When adding a new component to the collection, follow these guidelines:
 
 1. Create a new directory for the component in the `src/` directory (e.g. "new-shiny")
 2. Create an HTML and JS file for the component, with filenames that match the directory name (e.g. "new-shiny.html")
-3. **Create a markdown document in the component directory, where you will document any watched attributes, slots, or CSS-vars.**
+3. **Create a README.md in the component directory, where you will document any watched attributes, slots, or CSS-vars.**
 
 Once you have written some code you're ready to test, do the following:
 
