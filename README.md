@@ -1,6 +1,6 @@
 # UWDS Components
 
-This repository contains the source code for web components developed for (and used by) the (UW IT Design System)[https://github.com/UW-Madison-DoIT/uw-it-design-system].
+This repository contains the source code for web components developed for (and used by) the [UW IT Design System](https://github.com/UW-Madison-DoIT/uw-it-design-system).
 
 ## First-time setup
 
